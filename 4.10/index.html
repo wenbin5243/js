@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function buildUrl(){
+	var qs="?debug=true";
+
+	with(location){
+		var url=href+qs;
+	}
+
+	return url;
+}
+</script>
+</body>
+</html>
