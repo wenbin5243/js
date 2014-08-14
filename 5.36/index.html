@@ -7,12 +7,17 @@
 <body>
 <script type="text/javascript">
 
-var color="blue";
-
-function getColor(){
-	return color;
+var re=null,
+	i;
+for(i=0;i<10;i++){
+	re= /cat/g;
+	re.test("catastrophe");
 }
-console.log(getColor());//red
+
+for(i=0;i<10;i++){
+	re=new RegExp("cat","g");
+	re.test("catastrophe");
+}
 
 </script>
 </body>

@@ -7,13 +7,16 @@
 <body>
 <script type="text/javascript">
 
-var color="blue";
-
-function getColor(){
-	return color;
+function addSomeNumber(num){
+	return num+100;
 }
-console.log(getColor());//red
 
+function addSomeNumber(num){
+	return num+200;
+}
+
+var result=addSomeNumber(100);
+console.log(result);//300
 </script>
 </body>
 </html>

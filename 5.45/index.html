@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function sum(num1,num2){
+	return num1+num2;
+}
+alert(sum(10,10));
+
+var anotherSum=sum;
+alert(anotherSum(10,10));
+
+sum=null;
+alert(anotherSum(10,10));
+
+var anotherSum2=sum;
+alert(anotherSum2(10,10));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+
+var pattern1=/\[bc\]at/i;
+alert(pattern1.global);
+alert(pattern1.ignoreCase);
+alert(pattern1.multiline);
+alert(pattern1.lastIndex);
+alert(pattern1.source);
+
+var pattern2=new RegExp("\\[bc\\]at","i");
+
+alert(pattern2.global);
+alert(pattern2.ignoreCase);
+alert(pattern2.multiline);
+alert(pattern2.lastIndex);
+alert(pattern2.source);
+
+</script>
+</body>
+</html>

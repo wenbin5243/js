@@ -7,12 +7,12 @@
 <body>
 <script type="text/javascript">
 
-var color="blue";
+var text="000-00-0000";
+var pattern=/\d{3}-\d{2}-\d{4}/;
 
-function getColor(){
-	return color;
+if(pattern.test(text)){
+	alert("The pattern was matched.")
 }
-console.log(getColor());//red
 
 </script>
 </body>
