@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+function factorial(num){
+	if(num<=1){
+		return 1;
+	}else{
+		return num*factorial(num-1);
+	}
+}
+
+var trueFactorial=factorial;
+
+factorial=function(){
+	return 0;
+};
+
+alert(trueFactorial(5));//0
+alert(factorial(5));//0
+</script>
+</body>
+</html>
