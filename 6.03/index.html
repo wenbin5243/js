@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var person={};
+Object.defineProperty(person,"name",{
+	writable:false,
+	value:"wenbin"
+});
+console.log(person.name);
+person.name="zhou";
+console.log(person.name);
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+String.prototype.startsWith=function(text){
+	return this.indexOf(text)==0;
+};
+
+var msg="hello world!";
+console.log(msg.startsWith("hello"));
+</script>
+</body>
+</html>

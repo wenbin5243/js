@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+function Person(name,age,job){
+	this.name=name;
+	this.age=age;
+	this.job=job;
+	this.sayName=function(){
+		console.log(this.name);
+	};
+}
+
+var person=new Person("wenbin",29,"software engineer");
+person.sayName();
+
+Person("Gery",27,"doctor");
+window.sayName();
+var o=new Object();
+Person.call(o,"kristen",25,"nurse");
+o.sayName();
+</script>
+</body>
+</html>
