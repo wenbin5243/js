@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+function SuperType(name){
+	this.name=name;
+}
+
+function SubType(){
+	//继承了SuperType
+	SuperType.call(this,"wenbin");
+	this.age=29
+}
+
+var instance=new SubType();
+console.log(instance.name);//wenbin
+console.log(instance.age);//29
+
+</script>
+</body>
+</html>

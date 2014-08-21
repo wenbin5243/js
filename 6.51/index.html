@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var person={
+	name:"wenbin",
+	friends:["Shelby","Court","Van"]
+};
+
+var anotherPerson=Object.create(person,{
+	name:{
+		value:"Greg"
+	}
+});
+
+console.log(anotherPerson.name);//Greg
+</script>
+</body>
+</html>
