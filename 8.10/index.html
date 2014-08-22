@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var blocked=false;
+try{
+	var wroxWin=window.open("http://www.wrox.com","_blank");
+	if(wroxWin==null){
+		blocked=true;
+	}
+}catch(ex){
+	blocked=true;
+}
+if(blocked){
+	console.log("The popup was blocked!");
+}
+</script>
+
+</body>
+</html>

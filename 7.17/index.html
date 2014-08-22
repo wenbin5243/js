@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+window.onload=function(){
+	function assignHandler(){
+		var element=document.getElementById("someElement");
+		element.onclick=function(){
+			console.log(element.id);
+		}
+	}
+	assignHandler();
+}
+	
+</script>
+<div id="someElement">click</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var application=function(){
+	var components=new Array();
+	components.push(new BaseComponent());
+
+	return{
+		getComponentCount:function(){
+			return components.length;
+		},
+		registerComponent:function(component){
+			if(typeof component=="object"){
+				components.push(component);
+			}
+		}
+	}
+}
+
+</script>
+
+</body>
+</html>

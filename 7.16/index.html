@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var name="The Window";
+var object={
+	name:"My Object",
+	getName:function(){
+		return this.name;
+	}
+};
+console.log(object.getName());//My Object
+console.log((object.getName)());//My Object
+console.log((object.getName=object.getName)());//The Window
+
+</script>
+</body>
+</html>

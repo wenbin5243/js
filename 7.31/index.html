@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var singleton=function(){
+	var privateVariable=10;
+	function privateFunction(){
+		return false;
+	}
+	var object=new CustomType();
+	object.publicProperty=true;
+	object.publicMethod=function(){
+		privateVariable++;
+		return privateFunction();
+	};
+
+	return object;
+}();
+
+
+
+</script>
+
+</body>
+</html>
