@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+var images=document.getElementsByTagName("img");
+var myImage=images.namedItem("myImage");
+console.log(images.length);
+console.log(images[0].src);
+console.log(images.item(0).src);
+</script>
+<img src="myimage.gif" name="myImage">
+</body>
+</html>
