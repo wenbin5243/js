@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+<script type="text/javascript">
+function getElement(id){
+	if(document.getElementById){
+		return document.getElementById(id);
+	}else if(document.all){
+		return document.all[id];
+	}else{
+		throw new Error("No way to retrieve element!");
+	}
+}
+getElement(name);
+</script>
+<div id="name"></div>
+</body>
+</html>
