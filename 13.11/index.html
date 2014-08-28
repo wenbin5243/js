@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  	<input id="myBtn" type="button" value="myBtne">
+
+<script type="text/javascript">
+var btn=document.getElementById("myBtn");
+btn.onclick=function(event){
+	console.log("clicked");
+	event.stopPropagation();
+};
+document.body.onclick=function(event){
+	console.log("body clicked");
+}
+</script>
+
+</body>
+</html>

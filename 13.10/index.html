@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  	<input id="myBtn" type="button" value="myBtne">
+
+<script type="text/javascript">
+var btn=document.getElementById("myBtn");
+var handler=function(event){
+	switch(event.type){
+		case "click":
+			console.log("clicked");
+			break;
+		case "mouseover":
+			event.target.style.backgroundColor="red";
+			break;
+		case "mouseout":
+			event.target.style.backgroundColor="";
+			break;
+	}
+};
+btn.onclick=handler;
+btn.onmouseover=handler;
+btn.onmouseout=handler;
+</script>
+
+</body>
+</html>
