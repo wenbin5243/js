@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+<script type="text/javascript">
+  var myDiv=document.querySelector("div");
+  myDiv.style.cssText="width:25px;height:100px;background-color:green;"
+  console.log(myDiv.style.cssText);
+  myDiv.style.removeProperty("width");
+  var prop,value,i,len;
+  for(var i=0,len=myDiv.style.length;i<len;i++){
+    prop=myDiv.style[i];
+    value=myDiv.style.getPropertyCSSValue(prop);
+  	console.log(prop+" : "+value.cssText+"("+value.cssValueType+")");
+  	//console.log(myDiv.style.item(i));
+  }
+</script>
+
+</body>
+</html>

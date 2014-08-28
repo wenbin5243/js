@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+  body{background-color: red;}
+    div.box{
+      background-color: blue;
+      width: 100px;
+      height: 200px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+  <div id="myDiv" style="background-color:red;border:1px solid black"></div>
+<script type="text/javascript">
+  function getBoundingClientRect(element){
+    var scrollTop=document.documentElement.scrollTop;
+    var scrollLeft=document.documentElement.scrollLeft;
+    if(element.getBoundingClientRect){
+      if(typeof arguments.callee.offset!="number"){
+        var scrollTop=document.documentElement.scrollTop;
+        var temp=document.createElement("div");
+        temp.style.cssText="position:absolute;left:0;top:0;";
+        document.body.appendChild(temp);
+        arguments.callee.offset=-temp.getBoundingClientRect().top-scrollTop;
+        document.body.removeChild(temp);
+        temp=null;
+      }
+      var rect=element.getBoundingClientRect();
+      var offset=arguments.callee.offset;
+      return{
+        left:rect.left+offset,
+        right:rect.right+offset,
+        top:rect.top+offset,
+        bottom:rect.bottom+offset
+      };
+    }else{
+      var actualLeft=getElementLeft(element);
+      var actualTop=getElementTop(element);
+
+      return{
+        left:actualLeft-scrollLeft,
+        right:actualLeft+element.offsetWidth-scrollLeft,
+        top:actualTop-scrollTop,
+        bottom:actualTop+element.offsetHeight-scrollTop
+      }
+    }
+  }
+</script>
+
+</body>
+</html>

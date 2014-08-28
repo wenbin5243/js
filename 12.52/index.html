@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+  	<p id="p1"><b>hello</b>world!</p>
+
+<script type="text/javascript">
+var range=document.body.createTextRange();
+var found=range.findText("hello");
+var foundAgain=range.findText("hello",1);
+console.log(found);
+console.log(range.text);
+</script>
+
+</body>
+</html>

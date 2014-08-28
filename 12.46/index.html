@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+  <p id="p1"><b>he</b><b>llo</b>world!</p>
+  	<span style="color:red">Inserted text</span>
+
+<script type="text/javascript">
+var p1=document.getElementById("p1"),
+  helloNode=p1.firstChild.firstChild,
+  worldNode=p1.lastChild;
+  var range=document.createRange();
+  range.setStart(helloNode,2);
+  range.setEnd(worldNode,3);
+  var span=document.createRange("span");
+  span.style.color="red";
+  span.appendChild(document.createTextNode(Inserted text));
+  range.insertNode(span);
+</script>
+
+</body>
+</html>

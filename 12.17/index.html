@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+    div.box{
+      background-color: blue;
+      width: 100px;
+      height: 200px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+  <div id="myDiv" style="background-color:red;border:1px solid black"></div>
+<script type="text/javascript">
+  var sheet=document.styleSheets[0];
+  var rules=sheet.cssRules||sheet.rules;
+  var rule=rules[0];
+  console.log(rule.selectorText);
+  console.log(rule.style.cssText);
+  console.log(rule.style.backgroundColor);
+  console.log(rule.style.width);
+  console.log(rule.style.height);
+</script>
+
+</body>
+</html>

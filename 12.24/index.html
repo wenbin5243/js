@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+  body{background-color: red;}
+    div.box{
+      background-color: blue;
+      width: 100px;
+      height: 200px;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+  <div id="myDiv" style="background-color:red;border:1px solid black"></div>
+<script type="text/javascript">
+  function getElementLeft(element){
+    var actualLeft=element.offsetLeft;
+    var current=element.offsetParent;
+
+    while(current!=null){
+      actualLeft+=current.offsetLeft;
+      current=current.offsetParent;
+    }
+    return actualLeft;
+  }
+  function getElementTop(element){
+    var actualTop=element.offsetTop;
+    var current=element.offsetParent;
+
+    while(current!==null){
+      actualTop+=current.offsetTop;
+      current=current.offsetParent;
+    }
+    return actualTop;
+  }
+</script>
+
+</body>
+</html>

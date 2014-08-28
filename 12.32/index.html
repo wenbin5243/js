@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+  <link rel="stylesheet" type="text/css" href="1.css">
+  <link rel="stylesheet" type="text/css" href="2.css">
+</head>
+<body>
+  <div id="myDiv" style="background-color:red;border:1px solid black"></div>
+<script type="text/javascript">
+  var filter={
+  	acceptNode:function(node){
+  		return node.tagName.toLowerCase()=="p"?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+  	}
+  };
+  var interator=document.createNodeIterator(root,NodeFilter.SHOW_ElEMENT);
+  console.log(filter);
+  console.log(interator);
+</script>
+
+</body>
+</html>

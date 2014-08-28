@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+<script type="text/javascript">
+  var myDiv=document.querySelector("div");
+  myDiv.style.cssText="width:25px;height:100px;background-color:green;"
+  console.log(myDiv.style.cssText);
+  for(var i=0,len=myDiv.style.length;i<len;i++){
+  	console.log(myDiv.style[i]);
+  	//console.log(myDiv.style.item(i));
+  }
+</script>
+
+</body>
+</html>

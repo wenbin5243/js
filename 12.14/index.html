@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+    #myDiv{
+      background-color: blue;
+      width: 100px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="myDiv" style="background-color:red;border:1px solid black"></div>
+<script type="text/javascript">
+  var supportsDOM2StyleSheets=document.implementation.hasFeature("StyleSheets","2.0");
+  console.log(supportsDOM2StyleSheets);
+</script>
+
+</body>
+</html>
