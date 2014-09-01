@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  	<div id="myDiv">myDiv</div>
+
+<script type="text/javascript">
+var EventUtil={
+	addHandler:function(element,type,handler){
+		if(element.addEventListener){
+			element.addEventListener(type,handler,false);
+		}else if(element.attachEvent){
+			element.attachEvent("on"+type,handler);
+		}else{
+			element["on"+type]=handler;
+		}
+	},
+	getEvent:function(event){
+		return event?event:window.event;
+	},
+	getTarget:function(event){
+		return event.target||event.srcElement;
+	},
+	preventDefault:function(event){
+		if(event.preventDefault){
+			event.preventDefault();
+		}else{
+			event.returnValue=false;
+		}
+	},
+	removeHandler:function(element,type,handler){
+		if(element.removeEventListener){
+			element.removeEventListener(type,handler,false);
+		}else if(element.detachEvent){
+			element.detachEvent("on"+type,handler);
+		}else{
+			element["on"+type]=null;
+		}
+	},
+	stopPropagation:function(event){
+		if(event.stopPropagation){
+			event.stopPropagation();
+		}else{
+			event.cancelBubble=true;
+		}
+	},
+	getRelatedTarget:function(event){
+		if(event.relatedTarget){
+			return event.relatedTarget;
+		}else if(event.toElement){
+			return event.toElement;
+		}else if(event.fromElement){
+			return event.fromElement;
+		}else{
+			return null;
+		}
+	}
+}
+var div=document.getElementById("myDiv");
+EventUtil.addHandler(div,"mouseout",function(event){
+	event=EventUtil.getEvent(event);
+	var target=EventUtil.getTarget(event);
+	var relatedTarget=EventUtil.getRelatedTarget(event);
+	console.log("moused out of "+target.tagName+" to "+relatedTarget.tagName);
+})
+</script>
+
+</body>
+</html>

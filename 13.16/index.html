@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>js</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+  	<input id="myBtn" type="button" value="myBtne">
+
+<script type="text/javascript">
+var EventUtil={
+	addHandler:function(element,type,handler){
+		if(element.addEventListener){
+			element.addEventListener(type,handler,false);
+		}else if(element.attachEvent){
+			element.attachEvent("on"+type,handler);
+		}else{
+			element["on"+type]=handler;
+		}
+	},
+	getEvent:function(event){
+		return event?event:window.event;
+	},
+	getTarget:function(event){
+		return event.target||event.srcElement;
+	},
+	preventDefault:function(event){
+		if(event.preventDefault){
+			event.preventDefault();
+		}else{
+			event.returnValue=false;
+		}
+	},
+	removeHandler:function(element,type,handler){
+		if(element.removeEventListener){
+			element.removeEventListener(type,handler,false);
+		}else if(element.detachEvent){
+			element.detachEvent("on"+type,handler);
+		}else{
+			element["on"+type]=null;
+		}
+	},
+	stopPropagation:function(event){
+		if(event.stopPropagation){
+			event.stopPropagation();
+		}else{
+			event.cancelBubble=true;
+		}
+	}
+}
+EventUtil.addHandler(window,"load",function(event){
+	var image=document.createElement("img");
+	EventUtil.addHandler(image,"load",function(event){
+		event=EventUtil.getEvent(event);
+		console.log(EventUtil.getEvent(event).src);
+	});
+	document.body.appendChild(image);
+	image.src="smile.gif";
+})
+</script>
+
+</body>
+</html>
